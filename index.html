@@ -10,44 +10,76 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
     <link rel="stylesheet" href="style.css" />
-    <title>Vertigo</title>
   </head>
   <body>
-    <div class="logo">
-      <img src="./assets/logo.svg" alt="logo vertígo" />
-    </div>
-    <div class="title">
-      <h1>Acesse a plataforma</h1>
-      <p>
-        Faça login ou registre-se para começar a construir seus projetos ainda
-        hoje.
-      </p>
-    </div>
-    <div class="inputs">
-      <label for="cMail">E-mail</label>
-      <p>
-        <input
-          type="email"
-          name="tMail"
-          id="cMail"
-          placeholder="Digite seu e-mail"
-        />
-      </p>
-      <label for="cPassword">Senha</label>
-      <a href="">Esqueceu a senha?</a>
-      <p>
-        <input
-          type="password"
-          name="tPassword"
-          id="cPassword"
-          placeholder="Digite sua senha"
-        />
-      </p>
-      <button>Entrar</button>
-      <div class="subscribe">
-        <p>Ainda não tem uma conta? <a href="">Inscreva-se</a></p>
+    <div id="page" class="flex">
+      <div>
+        <header>
+          <img src="./assets/logo.svg" alt="Logo da Vertigo" />
+        </header>
+        <main>
+          <div class="headline">
+            <h1>Acesse a plataforma</h1>
+            <p>
+              Faça login ou registre-se para começar a construir seus projetos
+              ainda hoje.
+            </p>
+          </div>
+          <form>
+            <div class="input-wrapper">
+              <label for="email">E-mail</label>
+              <input
+                id="email"
+                type="email"
+                name="email"
+                required
+                placeholder="Digite seu e-mail"
+              />
+            </div>
+
+            <div class="input-wrapper">
+              <div class="label-wrapper flex">
+                <label for="senha"> Senha </label>
+                <a href="#"> Esqueceu a senha? </a>
+              </div>
+
+              <input
+                type="password"
+                id="senha"
+                placeholder="Digite sua senha"
+              />
+
+              <img
+                onclick="togglePassword()"
+                class="eye"
+                src="./assets/eye-off.svg"
+                alt="Ícone de olho fechado"
+              />
+              <img
+                onclick="togglePassword()"
+                class="eye hide"
+                src="./assets/eye.svg"
+                alt="Ícone de olho aberto"
+              />
+            </div>
+
+            <button type="submit">Entrar</button>
+
+            <div class="create-account">
+              Ainda não tem uma conta?
+              <a href="#"> Inscreva-se </a>
+            </div>
+          </form>
+        </main>
       </div>
+      <img
+        src="./assets/bg.jpg"
+        alt="Plano de fundo roxo com sombreado e linhas"
+      />
     </div>
+
+    <script src="./script.js"></script>
   </body>
 </html>
